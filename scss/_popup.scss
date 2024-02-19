@@ -1,0 +1,64 @@
+// .popup {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   visibility: hidden;
+//   opacity: 0;
+//   background: url('../src/images/back-popup.png') no-repeat 50% 50% / cover, $dark;
+//   transition: opacity .8s ease, visibility .8s ease;
+//   overflow-y: auto;
+
+//   &.big {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
+
+//   &__container {
+//     padding-top: 60px;
+//     padding-bottom: 60px;
+
+//     @media screen and (max-width: 767px) {
+//       padding-left: 35px;
+//       padding-right: 35px;
+//     }
+//   }
+
+//   &.active {
+//     z-index: 10;
+//     visibility: visible;
+//     opacity: 1;
+//   }
+
+//   &__title {
+//     @media screen and (max-width: 1400px) {
+//       max-width: 80%;
+//     }
+//   }
+
+//   &__close {
+//     position: absolute;
+//     right: 112px;
+//     top: 68px;
+//     color: #000;
+//     cursor: pointer;
+
+//     @media screen and (max-width: 1468px) {
+//       right: 72px;
+//     }
+
+//     @media screen and (max-width: 991px) {
+//       right: 32px;
+//     }
+//   }
+
+//   &__success-form {
+//     display: none;
+
+//     &.active {
+//       display: block;
+//     }
+//   }
+// }
