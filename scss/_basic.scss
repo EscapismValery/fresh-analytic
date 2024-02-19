@@ -144,12 +144,17 @@ body {
 }
 
 .text-btn {
-  @extend %btn-text;
+  @extend %text-btn;
   color: $light;
+}
+
+.text-gray {
+  color: $grayText;
 }
 
 .link {
   transition: color .3s ease;
+  cursor: pointer;
 
   &:hover {
     color: $primary;
@@ -164,17 +169,31 @@ body {
   color: $primary;
 }
 
-// .scroll-top {
-//   display: none;
-//   position: fixed;
-//   bottom: -100px;
-//   left: 20px;
+.field {
+  padding: 18px;
+  background-color: transparent;
+  border: 1px solid $gray;
+  border-radius: 6px;
+  transition: border-color .3s ease;
+  color: $light;
 
-//   @media screen and (max-width: 991px) {
-//     display: block;
-//   }
+  &:focus {
+    outline: none;
+    border-color: $light;
+  }
 
-//   .active {
-//     bottom: 40px;
-//   }
-// }
+  &:hover {
+    border-color: $light;
+  }
+
+  &::placeholder {
+    color: $grayText;
+  }
+
+  &[type=number] {
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+}

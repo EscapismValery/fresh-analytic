@@ -1,0 +1,99 @@
+.footer {
+  padding-top: 64px;
+  padding-bottom: 78px;
+  background-color: $darkGray;
+
+  &__container {
+    flex-direction: column;
+    row-gap: 88px;
+  }
+
+  &__content {
+    justify-content: space-between;
+    column-gap: 80px;
+  }
+
+  &__left {
+    flex-direction: column;
+    flex: 0 1 478px;
+  }
+
+  &__logo {
+    margin-bottom: 12px;
+    font-size: 10px;
+    line-height: 1.4;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #858585;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
+
+  &__form,
+  &__input {
+    width: 100%;
+  }
+
+  &__form {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  &__submit {
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%);
+  }
+
+  &__right {
+    padding-top: 33px;
+    column-gap: 80px;
+
+    &-title {
+      color: #9D9D9D;
+      line-height: 32px;;
+    }
+
+    &-list {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+
+    &-wrap {
+      &-top {
+        margin-bottom: 42px;
+        align-items: flex-start;
+        column-gap: 101px;
+      }
+    }
+  }
+
+  &__copy {
+    justify-content: space-between;
+    align-items: center;
+
+    &-to-top {
+      & svg rect,
+      & svg path {
+        transition: stroke .3s ease;
+      }
+
+      &:hover {
+        & svg rect,
+        & svg path {
+          stroke: $primary;
+        }
+      }
+    }
+
+    &-text {
+      line-height: 32px;
+      color: #9D9D9D;
+    }
+  }
+}

@@ -20,7 +20,6 @@
     padding: 10px;
     display: inline-block;
     background-color: $darkGray;
-    color: $lightGray;
     border-radius: 6px;
   }
 
@@ -34,7 +33,7 @@
     flex-direction: column;
     justify-content: space-between;
     row-gap: 30px;
-    padding: 30px 30px 35px;
+    padding: 30px 40px 35px;
     flex: 0 1 calc(25%);
     min-height: 253px;
     background-color: $darkGray;
@@ -48,10 +47,6 @@
 
     &-title {
       margin-bottom: 10px;
-    }
-
-    &-descr {
-      color: $lightGray;
     }
   }
 }
@@ -244,7 +239,6 @@
   &__descr {
     margin-bottom: 40px;
     max-width: 480px;
-    color: $lightGray;
   }
 
   &__btns {
@@ -504,10 +498,6 @@
     font-weight: 500;
   }
 
-  &__company {
-    color: $lightGray;
-  }
-
   &__link-icon {
     transition: transform .3s ease;
 
@@ -519,7 +509,6 @@
       display: block;
       width: 1px;
       min-height: 100%;
-      background-color: $lightGray;
     }
   }
 
@@ -534,13 +523,20 @@
   background: -webkit-linear-gradient(180deg, rgb(43, 43, 43) 85%, rgb(46, 58, 47));
   background: -moz-linear-gradient(180deg, rgb(43, 43, 43) 85%, rgb(46, 58, 47));
   background: linear-gradient(180deg, rgb(43, 43, 43) 85%, rgb(46, 58, 47));
+  overflow: hidden;
+
+  &__container {
+    justify-content: space-between;
+  }
 
   &__title {
     margin-bottom: 40px;
   }
 
   &__contacts {
-    flex: 0 1 40%;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 1 calc((100% / 3) - 20px);
 
     &-top {
       margin-bottom: 40px;
@@ -575,7 +571,6 @@
 
       &_top {
         margin-bottom: 12px;
-        color: $lightGray;
       }
     }
 
@@ -585,11 +580,27 @@
       right: 18px;
     }
   }
+
+  &__form {
+    position: relative;
+    flex: 0 1 calc((100% / 12 * 7) - 20px);
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 100%;
+      right: -50vw;
+      bottom: 0;
+      background-color: $darkGray;
+    }
+  }
 }
 
 .socials {
   &__title {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    color: $lightGray;
   }
 
   &__list {
@@ -663,6 +674,43 @@
           fill: #EF8024;
         }
       }
+    }
+  }
+}
+
+.form {
+  padding: 50px 0 60px 90px;
+  background-color: $darkGray;
+  border-radius: 12px 0 0 12px;
+  flex-direction: column;
+  row-gap: 20px;
+
+  &__wrap {
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__input {
+    flex: 0 0 calc(50% - 10px);
+  }
+
+  &__textarea {
+    resize: none;
+    min-height: 143px;
+  }
+
+  &__file {
+    margin-bottom: 60px;
+    align-items: center;
+    column-gap: 8px;
+  }
+
+  &__btn {
+    border: 1px solid $primary;
+    transition: background-color .3s ease;
+
+    &:hover {
+      background-color: $primary;
     }
   }
 }
