@@ -3,19 +3,37 @@
   padding-bottom: 78px;
   background-color: $darkGray;
 
+  @include breakpoint(mobile-sm) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
   &__container {
+    position: relative;
     flex-direction: column;
     row-gap: 88px;
+
+    @include breakpoint(mobile-sm) {
+      row-gap: 40px;
+    }
   }
 
   &__content {
     justify-content: space-between;
     column-gap: 80px;
+
+    @include breakpoint(tablet-sm) {
+      flex-direction: column;
+    }
   }
 
   &__left {
     flex-direction: column;
     flex: 0 1 478px;
+
+    @include breakpoint(tablet-sm) {
+      flex-basis: auto;
+    }
   }
 
   &__logo {
@@ -31,6 +49,14 @@
   &__title {
     margin-bottom: 16px;
     font-weight: 400;
+
+    @include breakpoint(tablet-sm) {
+      max-width: 70%;
+    }
+
+    @include breakpoint(mobile-sm) {
+      max-width: 100%;
+    }
   }
 
   &__form,
@@ -54,6 +80,11 @@
     padding-top: 33px;
     column-gap: 80px;
 
+    @include breakpoint(mobile-sm) {
+      padding-top: 30px;
+      flex-direction: column;
+    }
+
     &-title {
       color: #9D9D9D;
       line-height: 32px;;
@@ -62,13 +93,30 @@
     &-list {
       flex-direction: column;
       row-gap: 10px;
+
+      @include breakpoint(mobile-sm) {
+        margin-bottom: 30px;
+      }
     }
 
     &-wrap {
+      position: relative;
+
       &-top {
         margin-bottom: 42px;
         align-items: flex-start;
         column-gap: 101px;
+
+        @include breakpoint(mobile-sm) {
+          margin-bottom: 0;
+          flex-direction: column;
+        }
+      }
+
+      &-bottom {
+        @include breakpoint(mobile-sm) {
+          margin-bottom: 60px;
+        }
       }
     }
   }
@@ -94,6 +142,20 @@
     &-text {
       line-height: 32px;
       color: #9D9D9D;
+    }
+  }
+
+  &__btn {
+    @include breakpoint(tablet-sm) {
+      position: absolute;
+      top: 24px;
+      right: 20px;
+    }
+
+    @include breakpoint(mobile-sm) {
+      top: auto;
+      bottom: 0;
+      left: 0;
     }
   }
 }

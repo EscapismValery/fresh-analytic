@@ -55,11 +55,11 @@ body {
   padding: 0 100px;
   margin: 0 auto;
 
-  @media screen and (max-width: 1468px) {
+  @include breakpoint(laptop-xs) {
     padding: 0 60px;
   }
 
-  @media screen and (max-width: 991px) {
+  @include breakpoint(tablet-sm) {
     padding: 0 20px;
   }
 }
@@ -73,10 +73,10 @@ body {
     background-color: $primaryHover;
   }
 
-  @media screen and (max-width: 991px) {
-    width: 100%;
-    justify-content: center;
-  }
+  // @media screen and (max-width: 991px) {
+  //   width: 100%;
+  //   justify-content: center;
+  // }
 
   &-link {
     cursor: pointer;
@@ -84,13 +84,23 @@ body {
   }
 
   &_square {
-    padding: 21px 10px;
+    padding: 18px 19.5px;
     border-radius: 6px;
   }
 
   &_circle {
-    padding: 24px 30px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 27px 30px;
     border-radius: 50px;
+
+    @include breakpoint(mobile-sm) {
+      padding-top: 18px;
+      padding-bottom: 18px;
+      width: 100%;
+      justify-content: center;
+    }
 
     & svg {
       margin-left: 30px;
@@ -150,6 +160,14 @@ body {
 
 .text-gray {
   color: $grayText;
+
+  @include breakpoint(tablet-sm) {
+    font-size: 16px;
+  }
+
+  @include breakpoint(mobile-sm) {
+    font-size: 14px;
+  }
 }
 
 .link {
