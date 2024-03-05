@@ -6,12 +6,13 @@
   padding-bottom: 60px;
 
   @include breakpoint(tablet-sm) {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   @include breakpoint(mobile-sm) {
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   &-fixed {
