@@ -272,6 +272,12 @@
       & .for-who__item-right_dollar {
         background: url('../src/images/for-who/dollar.png') no-repeat 50% 50%, url('../src/images/for-who/line.svg') no-repeat 0% 50%, #334336;;
       }
+
+      & .for-who__item-right {
+        @include breakpoint(mobile-sm) {
+          background-size: 93px;
+        }
+      }
     }
   }
 }
