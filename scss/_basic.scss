@@ -1,6 +1,7 @@
 html {
 	box-sizing: border-box;
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 *,
@@ -25,6 +26,9 @@ img, picture {
 
 body {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 	font-family: $rubik;
   background-color: $dark;
   color: $light;
@@ -62,6 +66,14 @@ body {
   @include breakpoint(tablet-sm) {
     padding: 0 20px;
   }
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.footer {
+  flex-shrink: 0;
 }
 
 
