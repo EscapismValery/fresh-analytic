@@ -68,6 +68,38 @@ body {
   }
 }
 
+.section {
+  &-padd {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @include breakpoint(tablet-sm) {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+
+    @include breakpoint(mobile-sm) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &-marg {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    @include breakpoint(tablet-sm) {
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+
+    @include breakpoint(mobile-sm) {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
 .main {
   flex-grow: 1;
 }

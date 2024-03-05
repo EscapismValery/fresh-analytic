@@ -7,14 +7,14 @@
   }
 
   &_service {
-    margin-bottom: 100px;
+    padding-bottom: 50px;
 
     @include breakpoint(tablet-sm) {
-      margin-bottom: 50px;
+      padding-bottom: 25px;
     }
 
     @include breakpoint(mobile-sm) {
-      margin-bottom: 40px;
+      padding-bottom: 20px;
     }
   }
 
@@ -109,19 +109,19 @@
 
     &s {
       padding-top: 60px;
-      padding-bottom: 100px;
+      padding-bottom: 50px;
       column-gap: $gap;
 
       @include breakpoint(tablet-sm) {
         padding-top: 50px;
-        padding-bottom: 50px;
+        padding-bottom: 25px;
         flex-wrap: wrap;
         row-gap: $gap;
       }
 
       @include breakpoint(mobile-sm) {
         padding-top: 42px;
-        padding-bottom: 40px;
+        padding-bottom: 20px;
         row-gap: calc($gap / 2);
       }
     }
@@ -134,16 +134,6 @@
 
 // ГЛАВНАЯ для кого
 .for-who {
-  margin-bottom: 100px;
-
-  @include breakpoint(tablet-sm) {
-    margin-bottom: 50px;
-  }
-
-  @include breakpoint(mobile-sm) {
-    margin-bottom: 40px;
-  }
-
   &__title {
     margin-bottom: 20px;
 
@@ -404,22 +394,6 @@
 
 // ГЛАВНАЯ баннер бесплатный отчет
 .free-report {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background: -webkit-linear-gradient(180deg, rgb(30, 38, 30), rgb(43, 43, 43) 40%);
-  background: -moz-linear-gradient(180deg, rgb(30, 38, 30), rgb(43, 43, 43) 40%);
-  background: linear-gradient(180deg, rgb(30, 38, 30), rgb(43, 43, 43) 40%);
-
-  @include breakpoint(tablet-xs) {
-    padding-top: 50px;
-    padding-bottom: 45px;
-  }
-
-  @include breakpoint(mobile-sm) {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-
   &__wrap {
     padding: 60px 50px;
     background-color: $darkGray;
@@ -489,18 +463,9 @@
 
 // ГЛАВНАЯ баннер клиентские базы поставщиков
 .supplier-base {
-  padding-top: 100px;
   background: -webkit-linear-gradient(180deg, rgb(43, 43, 43) 10%, rgb(30, 38, 30) 50%, rgb(43, 43, 43) 90%);
   background: -moz-linear-gradient(180deg, rgb(43, 43, 43) 10%, rgb(30, 38, 30) 50%, rgb(43, 43, 43) 90%);
   background: linear-gradient(180deg, rgb(43, 43, 43) 10%, rgb(30, 38, 30) 50%, rgb(43, 43, 43) 90%);
-
-  @include breakpoint(tablet-sm) {
-    padding-top: 50px;
-  }
-
-  @include breakpoint(mobile-sm) {
-    padding-top: 40px;
-  }
 
   &__container {
     justify-content: space-between;
@@ -591,14 +556,14 @@
 .services {
   $root: &;
 
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 
   @include breakpoint(tablet-sm) {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
   }
 
   @include breakpoint(mobile-sm) {
-    margin-bottom: 40px;
+    padding-bottom: 40px;
   }
 
   &__title {
@@ -704,16 +669,6 @@
 }
 
 .safeguards {
-  padding-top: 100px;
-
-  @include breakpoint(tablet-sm) {
-    padding-top: 50px;
-  }
-
-  @include breakpoint(mobile-sm) {
-    padding-top: 40px;
-  }
-
   &__container {
     flex-direction: column;
     align-items: center;
@@ -724,8 +679,15 @@
     margin-bottom: 20px;
     width: 100px;
     height: 100px;
-    background: url('../src/icons/services/cloud.svg') no-repeat 50% 50%, $darkGray;
     border-radius: 20px;
+
+    &_znak {
+      background: url('../src/icons/services/znak.svg') no-repeat 50% 50%, $darkGray;
+    }
+
+    &_safe {
+      background: url('../src/icons/services/cloud.svg') no-repeat 50% 50%, $darkGray;
+    }
 
     @include breakpoint(mobile-sm) {
       margin-bottom: 10px;
@@ -823,16 +785,6 @@
 }
 
 .reports {
-  margin-bottom: 100px;
-
-  @include breakpoint(tablet-sm) {
-    margin-bottom: 50px;
-  }
-
-  @include breakpoint(mobile-sm) {
-    margin-bottom: 40px;
-  }
-
   &__title {
     margin-bottom: 30px;
   }
@@ -1057,16 +1009,6 @@
 
 // БЛОГ
 .blog {
-  padding-top: 100px;
-
-  @include breakpoint(tablet-sm) {
-    padding-top: 60px;
-  }
-
-  @include breakpoint(mobile-sm) {
-    padding-top: 40px;
-  }
-
   &__top {
     margin-bottom: 30px;
     justify-content: space-between;
@@ -1181,16 +1123,6 @@
 
 // ОТЗЫВЫ
 .reviews {
-  padding-top: 100px;
-
-  @include breakpoint(tablet-sm) {
-    padding-top: 90px;
-  }
-
-  @include breakpoint(mobile-sm) {
-    padding-top: 40px;
-  }
-
   &__top {
     margin-bottom: 30px;
     justify-content: space-between;
@@ -1351,7 +1283,6 @@
 
 // CTA контакты и форма
 .cta {
-  padding-top: 100px;
   padding-bottom: 100px;
   background: -webkit-linear-gradient(180deg, rgb(43, 43, 43) 85%, rgb(30, 38, 30));
   background: -moz-linear-gradient(180deg, rgb(43, 43, 43) 85%, rgb(30, 38, 30));
@@ -1359,12 +1290,10 @@
   overflow: hidden;
 
   @include breakpoint(tablet-sm) {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
   }
 
   @include breakpoint(mobile-sm) {
-    padding-top: 40px;
     padding-bottom: 40px;
   }
 
