@@ -1089,6 +1089,9 @@
 // ТАРИФЫ
 .tariffs {
   padding-bottom: 50px;
+    background: -webkit-linear-gradient(180deg, rgb(43, 43, 43) 25%, rgb(30, 38, 30) 50%, rgb(43, 43, 43) 75%);
+    background: -moz-linear-gradient(180deg, rgb(43, 43, 43) 25%, rgb(30, 38, 30) 50%, rgb(43, 43, 43) 75%);
+    background: linear-gradient(180deg, rgb(43, 43, 43) 25%, rgb(30, 38, 30) 50%, rgb(43, 43, 43) 75%);
 
   @include breakpoint(tablet-sm) {
     padding-bottom: 25px;
@@ -1116,7 +1119,14 @@
     row-gap: 47px;
     justify-content: space-between;
     background-color: $darkGray;
+    border: 1px solid $darkGray;
     border-radius: 12px;
+    transition: background-color .3s ease, border-color .3s ease;
+
+    &:hover {
+      background-color: transparent;
+      border-color: $gray;
+    }
 
     &_1 {
       min-height: 854px;
@@ -1160,7 +1170,7 @@
       margin-bottom: 20px;
       padding-bottom: 20px;
       text-align: center;
-      border-bottom: 1px solid $lightGray;
+      border-bottom: 1px solid $gray;
     }
 
     &-okay {
@@ -1171,6 +1181,13 @@
       column-gap: 12px;
       background-color: $dark;
       border-radius: 6px;
+      transition: background-color .3s ease;
+    }
+
+    &:hover {
+      & .tariffs__item-okay {
+        background-color: $darkGray;
+      }
     }
 
     &-list {
