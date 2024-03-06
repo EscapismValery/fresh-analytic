@@ -24,6 +24,7 @@
 
   &__container {
     justify-content: space-between;
+    align-items: center;
     column-gap: 50px;
     row-gap: $gap;
 
@@ -107,6 +108,10 @@
 .nav {
   &__list {
     column-gap: 24px;
+
+    @include breakpoint(laptop-xs) {
+      column-gap: 14px;
+    }
 
     @include breakpoint(tablet-sm) {
       margin-bottom: 40px;
