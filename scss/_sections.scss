@@ -1326,6 +1326,18 @@
 
 // ОТЗЫВЫ
 .reviews {
+  &-page {
+    padding-bottom: 100px;
+
+    @include breakpoint(table-sm) {
+      padding-bottom: 50px;
+    }
+
+    @include breakpoint(mobile-sm) {
+      padding-bottom: 40px;
+    }
+  }
+
   &__top {
     margin-bottom: 30px;
     justify-content: space-between;
@@ -1385,6 +1397,10 @@
   min-height: 506px;
   background-color: $darkGray;
   border-radius: 12px;
+
+  &-page {
+    flex-basis: 100%;
+  }
 
   @include breakpoint(tablet-sm) {
     flex-basis: 100%;
