@@ -917,11 +917,11 @@
     padding-bottom: 50px;
 
     @include breakpoint(tablet-sm) {
-      margin-bottom: 25px;
+      padding-bottom: 25px;
     }
 
     @include breakpoint(mobile-sm) {
-      margin-bottom: 20px;
+      padding-bottom: 20px;
     }
   }
 
@@ -1081,6 +1081,113 @@
       @include breakpoint(mobile-sm) {
         padding-top: 10px;
         width: 100%;
+      }
+    }
+  }
+}
+
+// ТАРИФЫ
+.tariffs {
+  padding-bottom: 50px;
+
+  @include breakpoint(tablet-sm) {
+    padding-bottom: 25px;
+  }
+
+  @include breakpoint(mobile-sm) {
+    padding-bottom: 20px;
+  }
+
+  &__list {
+    gap: 20px;
+    align-items: flex-end;
+
+    @include breakpoint(tablet-sm) {
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: normal;
+    }
+  }
+
+  &__item {
+    padding: 30px;
+    flex-direction: column;
+    flex: 0 1 calc(100% / 4);
+    row-gap: 47px;
+    justify-content: space-between;
+    background-color: $darkGray;
+    border-radius: 12px;
+
+    &_1 {
+      min-height: 854px;
+    }
+
+    &_2 {
+      min-height: 896px;
+    }
+
+    &_3 {
+      min-height: 939px;
+    }
+
+    &_4 {
+      min-height: 981px;
+    }
+
+    &-sale {
+      text-align: center;
+    }
+
+    @include breakpoint(laptop-xs) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @include breakpoint(tablet-sm) {
+      padding-left: 30px;
+      padding-right: 30px;
+      flex-basis: calc(50% - 5px);
+      min-height: 550px;
+    }
+
+    @include breakpoint(mobile-sm) {
+      padding: 20px;
+      flex-basis: 100%;
+      min-height: 490px;
+    }
+
+    &-title {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      text-align: center;
+      border-bottom: 1px solid $lightGray;
+    }
+
+    &-okay {
+      margin-bottom: 20px;
+      padding: 16px;
+      justify-content: center;
+      align-items: center;
+      column-gap: 12px;
+      background-color: $dark;
+      border-radius: 6px;
+    }
+
+    &-list {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+
+    &-bottom {
+      flex-direction: column;
+    }
+
+    &-number {
+      margin-bottom: 18px;
+      column-gap: 12px;
+
+      & svg {
+        flex: 0 0 22px;
       }
     }
   }
