@@ -140,8 +140,8 @@ body {
     border-radius: 50px;
 
     @include breakpoint(mobile-sm) {
-      padding-top: 18px;
-      padding-bottom: 18px;
+      padding-top: 22px;
+      padding-bottom: 22px;
       width: 100%;
       justify-content: center;
     }
