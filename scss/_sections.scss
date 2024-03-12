@@ -394,6 +394,18 @@
 
 // ГЛАВНАЯ баннер бесплатный отчет
 .free-report {
+  &_contacts {
+    padding-bottom: 100px;
+
+    @include breakpoint(tablet-sm) {
+      padding-bottom: 50px;
+    }
+
+    @include breakpoint(mobile-sm) {
+      padding-bottom: 40px;
+    }
+  }
+
   &__wrap {
     padding: 60px 50px;
     background-color: $darkGray;
@@ -1089,9 +1101,9 @@
 // ТАРИФЫ
 .tariffs {
   padding-bottom: 50px;
-    background: -webkit-linear-gradient(180deg, rgb(43, 43, 43) 25%, rgb(30, 38, 30) 50%, rgb(43, 43, 43) 75%);
-    background: -moz-linear-gradient(180deg, rgb(43, 43, 43) 25%, rgb(30, 38, 30) 50%, rgb(43, 43, 43) 75%);
-    background: linear-gradient(180deg, rgb(43, 43, 43) 25%, rgb(30, 38, 30) 50%, rgb(43, 43, 43) 75%);
+  background: -webkit-linear-gradient(180deg, rgb(43, 43, 43) 25%, rgb(30, 38, 30) 50%, rgb(43, 43, 43) 75%);
+  background: -moz-linear-gradient(180deg, rgb(43, 43, 43) 25%, rgb(30, 38, 30) 50%, rgb(43, 43, 43) 75%);
+  background: linear-gradient(180deg, rgb(43, 43, 43) 25%, rgb(30, 38, 30) 50%, rgb(43, 43, 43) 75%);
 
   @include breakpoint(tablet-sm) {
     padding-bottom: 25px;
@@ -1256,11 +1268,10 @@
   }
 }
 
-// БЛОГ карточка
 .article {
   position: relative;
-  padding: 30px;
-  flex: 0 1 calc(50% - 10px);
+  padding: 20px;
+  flex: 0 1 calc(25% - 15px);
   min-height: 320px;
   flex-direction: column;
   justify-content: space-between;
@@ -1269,28 +1280,73 @@
   border-radius: 12px;
 
   @include breakpoint(tablet-sm) {
-    flex-basis: 100%;
+    flex-basis: calc(50% - 10px);
   }
 
   @include breakpoint(mobile-sm) {
     padding: 20px;
-    padding-top: 87px;
     min-height: 252px;
+    flex-basis: 100%;
   }
 
   &s {
     justify-content: space-between;
-    flex-wrap: wrap;
     gap: $gap;
+
+    @include breakpoint(tablet-sm) {
+      flex-wrap: wrap;
+    }
+
+    &_1 {
+      margin-bottom: $gap;
+    }
+
+    &_2 {
+      & .article_double {
+        @include breakpoint(tablet-sm) {
+          order: 2;
+        }
+      }
+    }
   }
 
-  &__title {
-    margin-bottom: 10px;
+  &__top {
+    width: 100%;
+  }
+
+  &_double {
+    flex: 0 1 calc(50% - 10px);
+
+    @include breakpoint(tablet-sm) {
+      flex-basis: 100%;
+    }
+
+    @include breakpoint(mobile-sm) {
+      display: none;
+    }
+
+    & .article__title {
+      @include breakpoint(tablet-sm) {
+        max-width: 85%;
+      }
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 8px;
+
+    &-cont {
+      margin-bottom: 20px;
+      display: flex;
+      width: 100%;
+      height: 257px;
+    }
   }
 
   &__descr {
-    margin-bottom: 20px;
-    max-width: 65%;
+    margin-top: 10px;
     color: $lightGray;
   }
 
@@ -1315,11 +1371,16 @@
   }
 
   &__link {
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &_hidden {
     @include breakpoint(mobile-sm) {
-      padding-left: 20px;
-      padding-right: 20px;
-      width: 100%;
-      text-align: center;
+      display: none;
     }
   }
 }
@@ -1500,6 +1561,606 @@
   }
 }
 
+// ПАРТНЁРСКАЯ ПРОГРАММА
+.hero-pship {
+  &__main {
+    margin: 0 auto;
+    padding-bottom: 50px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 867px;
+
+    @include breakpoint(tablet-sm) {
+      padding-bottom: 25px;
+    }
+
+    @include breakpoint(mobile-sm) {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__descr {
+    margin-bottom: 20px;
+    max-width: 576px;
+  }
+
+  &__categories {
+    margin-bottom: 40px;
+    column-gap: $gap;
+
+    @include breakpoint(mobile-sm) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: calc($gap / 2);
+    }
+  }
+
+  &__category {
+    padding: 10px;
+    flex: 0 0 56px;
+    background-color: $darkGray;
+    border-radius: 6px;
+    transition: background-color .3s ease;
+  }
+}
+
+.solution {
+  &__top {
+    margin-bottom: 30px;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    @include breakpoint(mobile-sm) {
+      flex-direction: column;
+      align-items: normal;
+      row-gap: 20px;
+    }
+  }
+
+  &__title,
+  &__descr {
+    max-width: 642px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    gap: $gap;
+
+    @include breakpoint(tablet-sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    padding: 30px;
+    flex: 0 1 calc(100% / 3);
+    background: url('../src/icons/more/pship-up.svg') no-repeat calc(100% - 30px) calc(100% - 30px), $darkGray;
+    border-radius: 12px;
+
+    &-text {
+      max-width: 80%;
+      color: $light;
+      font-weight: 500;
+    }
+  }
+
+  &__btn {
+    &_desk {
+      @include breakpoint(mobile-sm) {
+        display: none;
+      }
+    }
+
+    &_mobile {
+      display: none;
+
+      @include breakpoint(mobile-sm) {
+        margin-top: 20px;
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.oppos {
+  &__top {
+    margin-bottom: 30px;
+    max-width: 576px;
+
+    @include breakpoint(mobile-sm) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    flex-wrap: wrap;
+    gap: $gap;
+
+    @include breakpoint(mobile-sm) {
+      gap: calc($gap / 2);
+    }
+  }
+
+  &__item {
+    padding: 20px;
+    flex: 0 1 calc(50% - 10px);
+    column-gap: 30px;
+    align-items: center;
+    border: 1px solid $gray;
+    border-radius: 12px;
+
+    @include breakpoint(mobile-sm) {
+      border-radius: 6px;
+      flex-basis: 100%;
+      column-gap: 10px;
+    }
+
+    &-icon {
+      min-width: 100px;
+      min-height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $darkGray;
+      border-radius: 20px;
+
+      @include breakpoint(mobile-sm) {
+        min-width: 56px;
+        min-height: 56px;
+        border-radius: 6px;
+      }
+
+      & svg {
+        @include breakpoint(mobile-sm) {
+          max-width: 28px;
+          max-height: 28px;
+        }
+      }
+    }
+
+    &-text {
+      max-width: 360px;
+    }
+  }
+}
+
+.banner-pship {
+  &__wrap {
+    @include breakpoint(mobile-sm) {
+      padding-top: 20px;
+    }
+  }
+
+  &__content {
+    @include breakpoint(mobile-sm) {
+      padding-top: 0;
+    }
+  }
+
+  &__title {
+    @include breakpoint(mobile-sm) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__image {
+    flex: 0 0 42%;
+    min-height: 100%;
+    background: url('../src/images/partnership/present.png') no-repeat 100% 50%;
+
+    @include breakpoint(tablet-xs) {
+      min-height: 279px;
+      background-position: 0% 0%;
+      background-size: contain;
+    }
+
+    @include breakpoint(mobile-sm) {
+      min-height: 173px;
+    }
+  }
+}
+
+.statuses {
+  &__top {
+    margin-bottom: 30px;
+    max-width: 493px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    justify-content: space-between;
+    gap: $gap;
+
+    @include breakpoint(tablet-xs) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    padding: 20px;
+    flex: 0 1 (100% / 3);
+    flex-direction: column;
+    border: 1px solid $gray;
+    border-radius: 12px;
+
+    &-title {
+      margin-bottom: 10px;
+    }
+
+    &-list {
+      margin-bottom: 40px;
+      flex-direction: column;
+      row-gap: 6px;
+      max-width: 268px;
+    }
+
+    &-btn {
+      margin-top: auto;
+    }
+  }
+
+  &__card {
+    margin-bottom: 30px;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 172px;
+    border-radius: 6px;
+    color: $light;
+    font-family: $rubik;
+    line-height: 1.3;
+    font-weight: 600;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+
+    &_bronze {
+      background-image: url('../src/images/statuses/bronze.jpg');
+    }
+
+    &_silver {
+      background-image: url('../src/images/statuses/silver.jpg');
+    }
+
+    &_gold {
+      background-image: url('../src/images/statuses/gold.jpg');
+    }
+
+    &-name {
+      font-size: 20px;
+    }
+
+    &-precent {
+      font-size: 40px;
+    }
+  }
+}
+
+.road {
+  background: -webkit-linear-gradient(180deg, rgb(43, 43, 43) 25%, rgb(30, 38, 30) 50%, rgb(43, 43, 43) 75%);
+  background: -moz-linear-gradient(180deg, rgb(43, 43, 43) 25%, rgb(30, 38, 30) 50%, rgb(43, 43, 43) 75%);
+  background: linear-gradient(180deg, rgb(43, 43, 43) 25%, rgb(30, 38, 30) 50%, rgb(43, 43, 43) 75%);
+
+  &__wrap {
+    padding: 40px;
+    flex-direction: column;
+    align-items: center;
+    background-color: $darkGray;
+    border-radius: 12px;
+
+    @include breakpoint(tablet-sm) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @include breakpoint(tablet-sm) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+
+    @include breakpoint(tablet-sm) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__picture {
+    margin-bottom: 40px;
+
+    @include breakpoint(tablet-sm) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__btn {
+    min-width: 900px;
+
+    @include breakpoint(tablet-sm) {
+      min-width: 515px;
+    }
+
+    @include breakpoint(mobile-sm) {
+      min-width: 100%;
+    }
+  }
+}
+
+.about {
+  &__container {
+    column-gap: 40px;
+    justify-content: space-between;
+
+    @include breakpoint(tablet-sm) {
+      flex-direction: column;
+      row-gap: 50px;
+    }
+
+    @include breakpoint(mobile-sm) {
+      row-gap: 40px;
+    }
+  }
+
+  &__left {
+    flex-direction: column;
+    flex: 0 0 calc(100% / 12 * 5);
+  }
+
+  &__right {
+    flex-direction: column;
+    flex: 0 0 calc(50% - 10px);
+    justify-content: space-between;
+
+    @include breakpoint(tablet-sm) {
+      max-width: 80%;
+    }
+
+    @include breakpoint(mobile-sm) {
+      max-width: 100%;
+    }
+
+    &-text {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__descr {
+    &_left {
+      margin-bottom: 40px;
+
+      @include breakpoint(mobile-sm) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &_right {
+      max-width: 464px;
+    }
+  }
+
+  &__list {
+    margin-top: auto;
+    max-width: 80%;
+    flex-wrap: wrap;
+    gap: $gap;
+
+    @include breakpoint(tablet-sm) {
+      max-width: 100%;
+      gap: calc($gap / 2);
+    }
+
+    @include breakpoint(mobile-sm) {
+      gap: $gap;
+    }
+  }
+
+  &__item {
+    padding: 16px;
+    min-height: 125px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1 1 calc(50% - 10px);
+    padding: 20px;
+    border: 1px solid $gray;
+    border-radius: 10px;
+
+    @include breakpoint(tablet-sm) {
+      min-height: 131px;
+    }
+  }
+
+  &__graph {
+    column-gap: 10px;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: url('../src/images/partnership/graph.png') repeat 50% 50%;
+
+    @include breakpoint(mobile-sm) {
+      background: none;
+    }
+
+    &-item {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-count {
+      margin-bottom: 9px;
+
+      @include breakpoint(mobile-sm) {
+        font-size: 10px;
+      }
+    }
+
+    &-year {
+      @include breakpoint(mobile-sm) {
+        font-size: 12px;
+      }
+    }
+
+    &-height {
+      margin-bottom: 10px;
+      width: 60px;
+      border-radius: 10px;
+      background-color: #334336;
+
+      @include breakpoint(mobile-sm) {
+        width: 32px;
+        border-radius: 6px;
+        animation: none;
+      }
+
+      &_1 {
+        animation: graph-height-1 2s ease paused forwards;
+
+        @keyframes graph-height-1 {
+          0% {
+            height: 0;
+          }
+
+          100% {
+            height: 48px;
+          }
+        }
+
+        @include breakpoint(mobile-sm) {
+          height: 26px;
+        }
+      }
+
+      &_2 {
+        animation: graph-height-2 2s ease paused forwards;
+
+        @keyframes graph-height-2 {
+          0% {
+            height: 0;
+          }
+
+          100% {
+            height: 122px;
+          }
+        }
+
+        @include breakpoint(mobile-sm) {
+          height: 67px;
+        }
+      }
+
+      &_3 {
+        animation: graph-height-3 2s ease paused forwards;
+
+        @keyframes graph-height-3 {
+          0% {
+            height: 0;
+          }
+
+          100% {
+            height: 162px;
+          }
+        }
+
+        @include breakpoint(mobile-sm) {
+          height: 87px;
+        }
+      }
+
+      &_4 {
+        animation: graph-height-4 2s ease paused forwards;
+
+        @keyframes graph-height-4 {
+          0% {
+            height: 0;
+          }
+
+          100% {
+            height: 244px;
+          }
+        }
+
+        @include breakpoint(mobile-sm) {
+          height: 131px;
+        }
+      }
+
+      &_5 {
+        animation: graph-height-5 2s ease paused forwards;
+
+        @keyframes graph-height-5 {
+          0% {
+            height: 0;
+          }
+
+          100% {
+            height: 300px;
+          }
+        }
+
+        @include breakpoint(mobile-sm) {
+          height: 161px;
+        }
+      }
+
+      &_6 {
+        animation: graph-height-6 2s ease paused forwards;
+
+        @keyframes graph-height-6 {
+          0% {
+            height: 0;
+          }
+
+          100% {
+            height: 429px;
+          }
+        }
+
+        @include breakpoint(mobile-sm) {
+          height: 233px;
+        }
+      }
+
+      &_running {
+        animation-play-state: running;
+      }
+
+      @include breakpoint(mobile-sm) {
+        animation: none;
+      }
+    }
+
+    &-year {
+      color: $grayText;
+
+      // @media screen and (max-width: 991px) {
+      //   font-size: 12px;
+      //   line-height: 16px;
+      // }
+    }
+  }
+}
+
 // CTA контакты и форма
 .cta {
   padding-bottom: 100px;
@@ -1540,7 +2201,7 @@
   &__contacts {
     flex-direction: column;
     justify-content: space-between;
-    flex: 0 1 calc((100% / 3) - 20px);
+    flex: 0 0 calc((100% / 3) - ($gap * 2 / 3));
 
     &-top {
       margin-bottom: 40px;
@@ -1559,6 +2220,7 @@
       position: relative;
       padding: 18px;
       display: block;
+      width: 100%;
       background-color: $darkGray;
       border: 1px solid $darkGray;
       border-radius: 12px;
@@ -1608,6 +2270,93 @@
 
       @include breakpoint(tablet-sm) {
         display: none;
+      }
+    }
+  }
+}
+
+// Страница Контакты
+.contacts {
+  padding-bottom: 50px;
+
+  @include breakpoint(tablet-sm) {
+    padding-bottom: 25px;
+  }
+
+  @include breakpoint(mobile-sm) {
+    padding-bottom: 20px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    text-align: center;
+
+    @include breakpoint(tablet-sm) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__wrap {
+    justify-content: space-between;
+    column-gap: $gap;
+
+    @include breakpoint(tablet-sm) {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+
+    @include breakpoint(mobile-sm) {
+      row-gap: 40px;
+    }
+  }
+
+  &__list {
+    flex-direction: column;
+    row-gap: $gap;
+
+    @include breakpoint(tablet-sm) {
+      row-gap: calc($gap / 2);
+    }
+  }
+
+  &__right {
+    flex-direction: column;
+    width: 100%;
+
+    &-top {
+      margin-bottom: 20px;
+      justify-content: space-between;
+      column-gap: $gap;
+
+      @include breakpoint(tablet-sm) {
+        display: none;
+      }
+    }
+  }
+
+  &__link-mobile {
+    display: none;
+
+    @include breakpoint(tablet-sm) {
+      display: block;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 100%;
+
+    &-cont {
+      height: 100%;
+
+      @include breakpoint(tablet-sm) {
+        margin-left: -20px;
+        margin-right: -20px;
+        height: 445px;
+      }
+
+      @include breakpoint(mobile-sm) {
+        height: 375px;
       }
     }
   }

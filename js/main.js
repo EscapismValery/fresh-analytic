@@ -25,18 +25,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // анимация графика
-  // const graph = document.querySelector('.about__graph');
-  // const graphItems = graph.querySelectorAll('.about__graph-height');
+  const graph = document.querySelector('.about__graph');
+  const graphItems = graph.querySelectorAll('.about__graph-height');
 
-  // window.addEventListener('scroll', () => {
-  //   let scrollDistance = window.scrollY + window.innerHeight;
+  window.addEventListener('scroll', () => {
+    let scrollDistance = window.scrollY + window.innerHeight;
 
-  //   if (scrollDistance > graph.offsetTop) {
-  //     for (item of graphItems) {
-  //       item.classList.add('about__graph-height_running');
-  //     }
-  //   }
-  // })
+    if (scrollDistance > graph.offsetTop) {
+      for (item of graphItems) {
+        item.classList.add('about__graph-height_running');
+      }
+    }
+  })
 
   // скролл вверх в мобилке и фиксированное меню при скролле вверх
   // const header = document.querySelector('.header');

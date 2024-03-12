@@ -78,6 +78,7 @@
   }
 
   &__right {
+    position: relative;
     padding-top: 33px;
     column-gap: 80px;
 
@@ -101,8 +102,6 @@
     }
 
     &-wrap {
-      position: relative;
-
       &-top {
         margin-bottom: 42px;
         align-items: flex-start;
