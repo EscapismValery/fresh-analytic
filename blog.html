@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Отзывы | Fresh Analytic. Анализ конкурентов</title>
+  <title>Блог | Fresh Analytic. Анализ конкурентов</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -89,159 +89,116 @@
     </div>
   </header>
   <main class="main">
-    <section class="reviews reviews-page">
-      <div class="reviews__container container">
-        <div class="reviews__top flex">
-          <h1 class="reviews__title title-main">Отзывы</h1>
-          <btn href="#" class="reviews__top-link btn btn_transp">Оставить&nbsp;отзыв</btn>
+    <section class="blog-hero">
+      <div class="blog-hero__container container flex">
+        <div class="blog-hero__content">
+          <h1 class="blog-hero__title title-main">Блог</h1>
+          <p class="blog-hero__descr text-primary text-gray">
+            Добро пожаловать в&nbsp;раздел &laquo;Блог&raquo; на&nbsp;нашем сайте! Здесь мы&nbsp;делаем глубокие погружения в&nbsp;мир нашей индустрии, делимся актуальными новостями, предоставляем вдохновение и&nbsp;делимся практическими советами для развития вашего бизнеса.
+            <br>
+            В&nbsp;нашем блоге вы&nbsp;найдете разнообразные темы: от&nbsp;обзоров новейших тенденций в&nbsp;нашей отрасли до&nbsp;советов по&nbsp;управлению бизнесом и&nbsp;стратегиям маркетинга. Мы&nbsp;уверены, что каждый посетитель найдет что-то полезное и&nbsp;интересное для себя.
+          </p>
         </div>
-        <ul class="reviews__list reviews-page__list list-reset flex">
-          <li class="reviews__item review review-page flex">
-            <div class="review__content">
-              <div class="review__avatar">
-                <img src="src/images/people/review1.png" alt="avatar">
+        <div class="blog-hero__image"></div>
+      </div>
+    </section>
+    <section class="mailing section-padd">
+      <div class="mailing__container container">
+        <div class="mailing__wrap">
+          <div class="mailing__content">
+            <h2 class="mailing__title title">Подпишись на&nbsp;рассылку наших статей и&nbsp;всегда будь вкурсе интересных событий</h2>
+            <form action="" class="mailing__form form-mailing">
+              <input class="mailing__input form-mailing__input text-small field" type="email" placeholder="Почта" required>
+              <button class="mailing__submit form-mailing__submit btn-reset" type="submit">
+                <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 1L16 7M16 7L10 13M16 7L-2.62268e-07 7" stroke="white" stroke-width="1.25"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="blog blog-articles section-padd">
+      <div class="blog__container container">
+        <div class="blog__top-page">
+          <h2 class="blog__title title">Наши статьи</h2>
+          <div class="blog__descr text-primary text-gray">Секреты успеха: Как увеличить показатели и&nbsp;достичь роста результативности с&nbsp;помощью наших продуктов</div>
+        </div>
+        <ul class="blog__articles articles articles_1 list-reset flex">
+          <li class="articles__article article flex">
+            <div class="article__top">
+              <div class="article__img-cont">
+                <img class="article__img" src="src/images/blog/blog.jpg" alt="blog">
               </div>
-              <div class="review__top flex">
-                <div class="review__top-left">
-                  <h4 class="review__name text-primary">Михаил Латышев</h4>
-                  <p class="review__company text-small text-gray">Глобалэнергохолдинг</p>
-                </div>
-                <div class="review__top-right flex">
-                  <a href="#" class="review__link-icon">
-                    <img src="src/icons/reviews/flamp.svg" alt="flamp icon">
-                  </a>
-                  <span class="review__link-icon-decor"></span>
-                  <a href="#" class="review__link-icon">
-                    <img src="src/icons/reviews/yandex.svg" alt="yandex icon">
-                  </a>
-                </div>
-              </div>
-              <p class="review__descr text-primary text-gray">Я&nbsp;принял решение и&nbsp;это оказалось одним из&nbsp;наилучших шагов для моего бизнеса. Полученная база данных оказалась не&nbsp;только обширной, но&nbsp;и&nbsp;стратегически ценной. Теперь у&nbsp;нас есть четкое представление о&nbsp;наших клиентах, и&nbsp;мы&nbsp;можем предоставлять персонализированный сервис. Спасибо за&nbsp;профессионализм, актуальные данные и&nbsp;дополнительные рекомендации по&nbsp;оптимизации взаимодействия с&nbsp;аудиторией. Определенно стоит каждого вложенного в&nbsp;эту услугу доллара. Рекомендую всем предпринимателям, стремящимся укрепить свою позицию на&nbsp;рынке. Рекомендую всем предпринимателям, стремящимся укрепить свою позицию на&nbsp;рынке.Рекомендую всем предпринимателям, стремящимся укрепить свою позицию на&nbsp;рынке.</p>
+              <h3 class="article__title title-small">Анализ конкурентов</h3>
+              <p class="article__descr text-primary">Что это такое и&nbsp;как они могут быть полезны вашему бизнесу</p>
             </div>
-            <a href="#" class="review__link btn btn-link btn_dark">Смотреть&nbsp;видео&nbsp;отзыв</a>
+            <a href="#" class="article__link btn btn-link btn_dark">Читать&nbsp;подробнее</a>
           </li>
-          <li class="reviews__item review review-page flex">
-            <div class="review__content">
-              <div class="review__avatar">
-                <img src="src/images/people/review1.png" alt="avatar">
+          <li class="articles__article article flex">
+            <div class="article__top">
+              <div class="article__img-cont">
+                <img class="article__img" src="src/images/blog/blog.jpg" alt="blog">
               </div>
-              <div class="review__top flex">
-                <div class="review__top-left">
-                  <h4 class="review__name text-primary">Михаил Латышев</h4>
-                  <p class="review__company text-small text-gray">Глобалэнергохолдинг</p>
-                </div>
-                <div class="review__top-right flex">
-                  <a href="#" class="review__link-icon">
-                    <img src="src/icons/reviews/flamp.svg" alt="flamp icon">
-                  </a>
-                  <span class="review__link-icon-decor"></span>
-                  <a href="#" class="review__link-icon">
-                    <img src="src/icons/reviews/yandex.svg" alt="yandex icon">
-                  </a>
-                </div>
-              </div>
-              <p class="review__descr text-primary text-gray">Я&nbsp;принял решение и&nbsp;это оказалось одним из&nbsp;наилучших шагов для моего бизнеса. Полученная база данных оказалась не&nbsp;только обширной, но&nbsp;и&nbsp;стратегически ценной. Теперь у&nbsp;нас есть четкое представление о&nbsp;наших клиентах, и&nbsp;мы&nbsp;можем предоставлять персонализированный сервис. Спасибо за&nbsp;профессионализм, актуальные данные и&nbsp;дополнительные рекомендации по&nbsp;оптимизации взаимодействия с&nbsp;аудиторией. Определенно стоит каждого вложенного в&nbsp;эту услугу доллара. Рекомендую всем предпринимателям, стремящимся укрепить свою позицию на&nbsp;рынке. Рекомендую всем предпринимателям, стремящимся укрепить свою позицию на&nbsp;рынке.Рекомендую всем предпринимателям, стремящимся укрепить свою позицию на&nbsp;рынке.</p>
+              <h3 class="article__title title-small">Клиентские базы</h3>
+              <p class="article__descr text-primary">Что это такое и&nbsp;как они могут быть полезны вашему бизнесу</p>
             </div>
-            <a href="#" class="review__link btn btn-link btn_dark">Смотреть&nbsp;видео&nbsp;отзыв</a>
+            <div class="article__bottom flex">
+              <a href="#" class="article__link btn btn-link btn_dark">Читать&nbsp;подробнее</a>
+            </div>
           </li>
-          <li class="reviews__item review review-page flex">
-            <div class="review__content">
-              <div class="review__avatar">
-                <img src="src/images/people/review1.png" alt="avatar">
+          <li class="articles__article article article_double flex">
+            <div class="article__top">
+              <div class="article__img-cont">
+                <img class="article__img-double" src="src/images/blog/blog2.png" alt="blog">
               </div>
-              <div class="review__top flex">
-                <div class="review__top-left">
-                  <h4 class="review__name text-primary">Михаил Латышев</h4>
-                  <p class="review__company text-small text-gray">Глобалэнергохолдинг</p>
-                </div>
-                <div class="review__top-right flex">
-                  <a href="#" class="review__link-icon">
-                    <img src="src/icons/reviews/flamp.svg" alt="flamp icon">
-                  </a>
-                  <span class="review__link-icon-decor"></span>
-                  <a href="#" class="review__link-icon">
-                    <img src="src/icons/reviews/yandex.svg" alt="yandex icon">
-                  </a>
-                </div>
-              </div>
-              <p class="review__descr text-primary text-gray">Я&nbsp;принял решение и&nbsp;это оказалось одним из&nbsp;наилучших шагов для моего бизнеса. Полученная база данных оказалась не&nbsp;только обширной, но&nbsp;и&nbsp;стратегически ценной. Теперь у&nbsp;нас есть четкое представление о&nbsp;наших клиентах, и&nbsp;мы&nbsp;можем предоставлять персонализированный сервис. Спасибо за&nbsp;профессионализм, актуальные данные и&nbsp;дополнительные рекомендации по&nbsp;оптимизации взаимодействия с&nbsp;аудиторией. Определенно стоит каждого вложенного в&nbsp;эту услугу доллара. Рекомендую всем предпринимателям, стремящимся укрепить свою позицию на&nbsp;рынке. Рекомендую всем предпринимателям, стремящимся укрепить свою позицию на&nbsp;рынке.Рекомендую всем предпринимателям, стремящимся укрепить свою позицию на&nbsp;рынке.</p>
+              <h3 class="article__title title-small">Как правильно использовать анализ конкурентов в&nbsp;своей работе для достижения максимального результата</h3>
+              <!-- <p class="article__descr text-primary">Что это такое и&nbsp;как они могут быть полезны вашему бизнесу</p> -->
             </div>
-            <a href="#" class="review__link btn btn-link btn_dark">Смотреть&nbsp;видео&nbsp;отзыв</a>
-          </li>
-          <li class="reviews__item review review-page flex">
-            <div class="review__content">
-              <div class="review__avatar">
-                <img src="src/images/people/review1.png" alt="avatar">
-              </div>
-              <div class="review__top flex">
-                <div class="review__top-left">
-                  <h4 class="review__name text-primary">Михаил Латышев</h4>
-                  <p class="review__company text-small text-gray">Глобалэнергохолдинг</p>
-                </div>
-                <div class="review__top-right flex">
-                  <a href="#" class="review__link-icon">
-                    <img src="src/icons/reviews/flamp.svg" alt="flamp icon">
-                  </a>
-                  <span class="review__link-icon-decor"></span>
-                  <a href="#" class="review__link-icon">
-                    <img src="src/icons/reviews/yandex.svg" alt="yandex icon">
-                  </a>
-                </div>
-              </div>
-              <p class="review__descr text-primary text-gray">Я&nbsp;принял решение и&nbsp;это оказалось одним из&nbsp;наилучших шагов для моего бизнеса. Полученная база данных оказалась не&nbsp;только обширной, но&nbsp;и&nbsp;стратегически ценной. Теперь у&nbsp;нас есть четкое представление о&nbsp;наших клиентах, и&nbsp;мы&nbsp;можем предоставлять персонализированный сервис. Спасибо за&nbsp;профессионализм, актуальные данные и&nbsp;дополнительные рекомендации по&nbsp;оптимизации взаимодействия с&nbsp;аудиторией. Определенно стоит каждого вложенного в&nbsp;эту услугу доллара. Рекомендую всем предпринимателям, стремящимся укрепить свою позицию на&nbsp;рынке. Рекомендую всем предпринимателям, стремящимся укрепить свою позицию на&nbsp;рынке.Рекомендую всем предпринимателям, стремящимся укрепить свою позицию на&nbsp;рынке.</p>
+            <div class="article__bottom flex">
+              <a href="#" class="article__link btn btn-link btn_dark">Читать&nbsp;подробнее</a>
             </div>
-            <a href="#" class="review__link btn btn-link btn_dark">Смотреть&nbsp;видео&nbsp;отзыв</a>
-          </li>
-          <li class="reviews__item review review-page flex">
-            <div class="review__content">
-              <div class="review__avatar">
-                <img src="src/images/people/review1.png" alt="avatar">
-              </div>
-              <div class="review__top flex">
-                <div class="review__top-left">
-                  <h4 class="review__name text-primary">Михаил Латышев</h4>
-                  <p class="review__company text-small text-gray">Глобалэнергохолдинг</p>
-                </div>
-                <div class="review__top-right flex">
-                  <a href="#" class="review__link-icon">
-                    <img src="src/icons/reviews/flamp.svg" alt="flamp icon">
-                  </a>
-                  <span class="review__link-icon-decor"></span>
-                  <a href="#" class="review__link-icon">
-                    <img src="src/icons/reviews/yandex.svg" alt="yandex icon">
-                  </a>
-                </div>
-              </div>
-              <p class="review__descr text-primary text-gray">Я&nbsp;принял решение и&nbsp;это оказалось одним из&nbsp;наилучших шагов для моего бизнеса. Полученная база данных оказалась не&nbsp;только обширной, но&nbsp;и&nbsp;стратегически ценной. Теперь у&nbsp;нас есть четкое представление о&nbsp;наших клиентах, и&nbsp;мы&nbsp;можем предоставлять персонализированный сервис. Спасибо за&nbsp;профессионализм, актуальные данные и&nbsp;дополнительные рекомендации по&nbsp;оптимизации взаимодействия с&nbsp;аудиторией. Определенно стоит каждого вложенного в&nbsp;эту услугу доллара. Рекомендую всем предпринимателям, стремящимся укрепить свою позицию на&nbsp;рынке. Рекомендую всем предпринимателям, стремящимся укрепить свою позицию на&nbsp;рынке.Рекомендую всем предпринимателям, стремящимся укрепить свою позицию на&nbsp;рынке.</p>
-            </div>
-            <a href="#" class="review__link btn btn-link btn_dark">Смотреть&nbsp;видео&nbsp;отзыв</a>
-          </li>
-          <li class="reviews__item review review-page flex">
-            <div class="review__content">
-              <div class="review__avatar">
-                <img src="src/images/people/review1.png" alt="avatar">
-              </div>
-              <div class="review__top flex">
-                <div class="review__top-left">
-                  <h4 class="review__name text-primary">Михаил Латышев</h4>
-                  <p class="review__company text-small text-gray">Глобалэнергохолдинг</p>
-                </div>
-                <div class="review__top-right flex">
-                  <a href="#" class="review__link-icon">
-                    <img src="src/icons/reviews/flamp.svg" alt="flamp icon">
-                  </a>
-                  <span class="review__link-icon-decor"></span>
-                  <a href="#" class="review__link-icon">
-                    <img src="src/icons/reviews/yandex.svg" alt="yandex icon">
-                  </a>
-                </div>
-              </div>
-              <p class="review__descr text-primary text-gray">Я&nbsp;принял решение и&nbsp;это оказалось одним из&nbsp;наилучших шагов для моего бизнеса. Полученная база данных оказалась не&nbsp;только обширной, но&nbsp;и&nbsp;стратегически ценной. Теперь у&nbsp;нас есть четкое представление о&nbsp;наших клиентах, и&nbsp;мы&nbsp;можем предоставлять персонализированный сервис. Спасибо за&nbsp;профессионализм, актуальные данные и&nbsp;дополнительные рекомендации по&nbsp;оптимизации взаимодействия с&nbsp;аудиторией. Определенно стоит каждого вложенного в&nbsp;эту услугу доллара. Рекомендую всем предпринимателям, стремящимся укрепить свою позицию на&nbsp;рынке. Рекомендую всем предпринимателям, стремящимся укрепить свою позицию на&nbsp;рынке.Рекомендую всем предпринимателям, стремящимся укрепить свою позицию на&nbsp;рынке.</p>
-            </div>
-            <a href="#" class="review__link btn btn-link btn_dark">Смотреть&nbsp;видео&nbsp;отзыв</a>
           </li>
         </ul>
-        <btn href="#" class="reviews__link btn btn_transp">Оставить&nbsp;отзыв</btn>
+        <ul class="blog__articles articles articles_2 list-reset flex">
+          <li class="articles__article article article_double flex">
+            <div class="article__top">
+              <div class="article__img-cont">
+                <img class="article__img-double" src="src/images/blog/blog2.png" alt="blog">
+              </div>
+              <h3 class="article__title title-small">Как правильно использовать анализ конкурентов в&nbsp;своей работе для достижения максимального результата</h3>
+              <!-- <p class="article__descr text-primary">Что это такое и&nbsp;как они могут быть полезны вашему бизнесу</p> -->
+            </div>
+            <div class="article__bottom flex">
+              <a href="#" class="article__link btn btn-link btn_dark">Читать&nbsp;подробнее</a>
+            </div>
+          </li>
+          <li class="articles__article article flex">
+            <div class="article__top">
+              <div class="article__img-cont">
+                <img class="article__img" src="src/images/blog/blog.jpg" alt="blog">
+              </div>
+              <h3 class="article__title title-small">Бесплатный тестовый аналитический отчет</h3>
+              <p class="article__descr text-primary">Что это такое и&nbsp;как они могут быть полезны вашему бизнесу</p>
+            </div>
+            <div class="article__bottom flex">
+              <a href="#" class="article__link btn btn-link btn_dark">Читать&nbsp;подробнее</a>
+            </div>
+          </li>
+          <li class="articles__article article flex">
+            <div class="article__top">
+              <div class="article__img-cont">
+                <img class="article__img" src="src/images/blog/blog.jpg" alt="blog">
+              </div>
+              <h3 class="article__title title-small">Условия оплаты и сотрудничества</h3>
+              <p class="article__descr text-primary">Что это такое и&nbsp;как они могут быть полезны вашему бизнесу</p>
+            </div>
+            <div class="article__bottom flex">
+              <a href="#" class="article__link btn btn-link btn_dark">Читать&nbsp;подробнее</a>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
@@ -384,7 +341,7 @@
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
   <script src="js/smoothScroll.js"></script>
   <script src="https://unpkg.com/imask"></script>
   <script src="js/popup.js"></script>

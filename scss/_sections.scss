@@ -1321,10 +1321,6 @@
       flex-basis: 100%;
     }
 
-    @include breakpoint(mobile-sm) {
-      display: none;
-    }
-
     & .article__title {
       @include breakpoint(tablet-sm) {
         max-width: 85%;
@@ -1341,7 +1337,7 @@
       margin-bottom: 20px;
       display: flex;
       width: 100%;
-      height: 257px;
+      height: 140px;
     }
   }
 
@@ -1384,6 +1380,164 @@
     }
   }
 }
+
+// БЛОГ страница
+.blog {
+  &-hero {
+    margin-bottom: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #3E344B;
+
+    @include breakpoint(tablet-sm) {
+      margin-bottom: 25px;
+      padding-top: 30px;
+      padding-bottom: 190px;
+    }
+
+    @include breakpoint(mobile-sm) {
+      margin-bottom: 20px;
+      padding-top: 20px;
+      padding-bottom: 50px;
+    }
+
+    &__container {
+      justify-content: space-between;
+
+      @include breakpoint(tablet-sm) {
+        flex-direction: column-reverse;
+        row-gap: 30px;
+
+        @include breakpoint(mobile-sm) {
+          row-gap: 20px;
+        }
+      }
+    }
+
+    &__content {
+      flex: 0 0 calc(50% - 46px);
+
+      @include breakpoint(tablet-sm) {
+        max-width: 80%;
+      }
+
+      @include breakpoint(mobile-sm) {
+        max-width: 100%;
+      }
+    }
+
+    &__title {
+      margin-bottom: 20px;
+
+      @include breakpoint(mobile-sm) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &__image {
+      flex: 0 0 calc(50% - 10px);
+      min-height: 520px;
+      background: url('../src/images/blog/blog-main.jpg') no-repeat 50% 50% / cover;
+      border-radius: 6px;
+
+      @include breakpoint(tablet-sm) {
+        margin-left: 10px;
+        margin-right: 10px;
+        min-height: 395px;
+      }
+
+      @include breakpoint(mobile-sm) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__top-page {
+    margin: 0 auto 30px;
+    max-width: 523px;
+    text-align: center;
+  }
+
+  &-articles {
+    padding-bottom: 100px;
+
+    @include breakpoint(table-sm) {
+      padding-bottom: 50px;
+    }
+
+    @include breakpoint(mobile-sm) {
+      padding-bottom: 40px;
+    }
+  }
+}
+
+// Блок с подпиской на рассылку
+.mailing {
+  &__wrap {
+    padding: 20px 50px;
+    background-color: $darkGray;
+    border-radius: 12px;
+
+    @include breakpoint(tablet-sm) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    @include breakpoint(mobile-sm) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  &__content {
+    padding-top: 36px;
+    padding-bottom: 36px;
+    background: url("../src/images/blog/blog-cta.png") no-repeat calc(100% - 12px) 50% / contain;
+
+    @include breakpoint(tablet-sm) {
+      padding-top: 339px;
+      padding-bottom: 40px;
+      background-position: 0 0;
+      background-size: auto;
+    }
+
+    @include breakpoint(mobile-sm) {
+      padding-top: 242px;
+      background-size: 270px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 54px;
+    max-width: 60%;
+
+    @include breakpoint(tablet-sm) {
+      margin-bottom: 40px;
+      max-width: 90%;
+    }
+  }
+
+  &__form {
+    max-width: 478px;
+  }
+
+  &__input {
+    width: 100%;
+  }
+}
+
+.form-mailing {
+  position: relative;
+
+  &__submit {
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%);
+  }
+}
+
 
 // ОТЗЫВЫ
 .reviews {
