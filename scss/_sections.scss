@@ -1098,6 +1098,212 @@
   }
 }
 
+// Страница Кейса
+.case {
+  &-hero {
+    padding-bottom: 50px;
+
+    @include breakpoint(tablet-sm) {
+      padding-bottom: 25px;
+    }
+
+    @include breakpoint(mobile-sm) {
+      padding-bottom: 20px;
+    }
+
+    &__content {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__bottom {
+      margin-top: 40px;
+      margin-bottom: 0;
+    }
+  }
+
+  &-results {
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__list {
+      padding: 36px 40px;
+      justify-content: space-between;
+      column-gap: 40px;
+      row-gap: 36px;
+      flex-wrap: wrap;
+      border: 1px solid $gray;
+      border-radius: 12px;
+
+      @include breakpoint(tablet-sm) {
+        padding: 30px;
+        column-gap: 30px;
+        row-gap: 30px;
+      }
+
+      @include breakpoint(mobile-sm) {
+        padding: 20px;
+        column-gap: 20px;
+      }
+    }
+
+    &__item {
+      flex: 1 1 30%;
+
+      &-title {
+        margin-bottom: 6px;
+        font-weight: 500;
+      }
+
+      &-content {
+        justify-content: space-between;
+        column-gap: 10px;
+      }
+
+      &-before,
+      &-after {
+        flex: 1 1 50%;
+      }
+
+      &-rub {
+        margin-bottom: 6px;
+        padding: 26px;
+        text-align: center;
+        border-radius: 6px;
+
+        &_before {
+          background-color: $gray;
+        }
+
+        &_after {
+          background-color: #334336;
+        }
+      }
+    }
+  }
+
+  &-video {
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__wrap {
+      position: relative;
+      min-height: 513px;
+      background: url('../src/images/video/preview.jpg') no-repeat 50% 50% / cover;
+      border-radius: 16px;
+
+      @include breakpoint(tablet-sm) {
+        min-height: 640px;
+      }
+
+      @include breakpoint(mobile-sm) {
+        min-height: 335px;
+      }
+    }
+
+    &__play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+
+      & svg circle {
+        transition: fill .3s ease;
+      }
+
+      &:hover {
+        & svg circle {
+          fill: $primary;
+        }
+      }
+    }
+  }
+
+  &-cta {
+    padding-bottom: 100px;
+
+    @include breakpoint(tablet-sm) {
+      padding-bottom: 50px;
+    }
+
+    @include breakpoint(mobile-sm) {
+      padding-bottom: 40px;
+    }
+
+    &__wrap {
+      padding-left: 50px;
+      justify-content: space-between;
+      background-color: $darkGray;
+      border-radius: 20px;
+
+      @include breakpoint(tablet-xs) {
+        flex-direction: column-reverse;
+      }
+
+      @include breakpoint(mobile-sm) {
+        padding-left: 20px;
+      }
+    }
+
+    &__left {
+      padding-top: 61px;
+      padding-bottom: 61px;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 50%;
+
+      @include breakpoint(tablet-xs) {
+        padding-top: 0;
+        padding-bottom: 40px;
+        max-width: 90%;
+      }
+    }
+
+    &__title {
+      margin-bottom: 10px;
+    }
+
+    &__descr {
+      margin-bottom: 40px;
+
+      @include breakpoint(tablet-xs) {
+        max-width: 70%;
+      }
+    }
+
+    &__btn {
+      margin-top: auto;
+    }
+
+    &__right {
+      padding-top: 42px;
+      padding-right: 44px;
+      max-width: 417px;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 13px;
+
+      @include breakpoint(tablet-xs) {
+        align-items: flex-start;
+      }
+
+      @include breakpoint(mobile-sm) {
+        padding-top: 20px;
+        padding-right: 20px;
+      }
+
+      &-text {
+        padding: 18px;
+        background-color: $dark;
+        border-radius: 6px;
+      }
+    }
+  }
+}
+
 // ТАРИФЫ
 .tariffs {
   padding-bottom: 50px;
@@ -1537,7 +1743,6 @@
     transform: translateY(-50%);
   }
 }
-
 
 // ОТЗЫВЫ
 .reviews {
@@ -2667,5 +2872,36 @@
     @include breakpoint(mobile-sm) {
       margin-bottom: 50px;
     }
+  }
+}
+
+// Хлебные крошки
+.bread {
+  margin-bottom: 20px;
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 12px;
+    cursor: pointer;
+
+    &:hover {
+      & svg path {
+        stroke: $primary;
+      }
+
+      & .bread__text {
+        color: $primary
+      }
+    }
+
+    & svg path {
+      transition: stroke .3s ease;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    transition: color .3s ease;
   }
 }
