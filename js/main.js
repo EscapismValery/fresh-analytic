@@ -25,18 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // анимация графика
-  const graph = document.querySelector('.about__graph');
-  const graphItems = graph.querySelectorAll('.about__graph-height');
+  if (document.querySelector('.about__graph')) {
+    const graph = document.querySelector('.about__graph');
+    const graphItems = graph.querySelectorAll('.about__graph-height');
 
-  window.addEventListener('scroll', () => {
-    let scrollDistance = window.scrollY + window.innerHeight;
+    window.addEventListener('scroll', () => {
+      let scrollDistance = window.scrollY + window.innerHeight;
 
-    if (scrollDistance > graph.offsetTop) {
-      for (item of graphItems) {
-        item.classList.add('about__graph-height_running');
+      if (scrollDistance > graph.offsetTop) {
+        for (item of graphItems) {
+          item.classList.add('about__graph-height_running');
+        }
       }
-    }
-  })
+    })
+  }
+
 
   // скролл вверх в мобилке и фиксированное меню при скролле вверх
   // const header = document.querySelector('.header');
@@ -67,4 +70,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //   lastScrollTop = scrollDistance;
   // })
+
+
+
+  // Вычисление количества загруженных файлов в форме
+  const inputFile = document.querySelectorAll('.form__file-input');
+    Array.prototype.forEach.call(inputFile, function (input) {
+      let label = input.parentElement,
+        labelVal = label.querySelector('.form__file-text').innerText;
+
+      input.addEventListener('change', function (e) {
+        let countFiles = '';
+        if (this.files && this.files.length >= 1)
+          countFiles = this.files.length;
+
+        if (countFiles)
+          label.querySelector('.form__file-text').innerText = 'Выбрано файлов: ' + countFiles;
+        else
+          label.querySelector('.form__file-text').innerText = 'Прикрепить файлы';
+      });
+    });
 })

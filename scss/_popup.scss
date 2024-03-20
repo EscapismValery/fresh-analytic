@@ -1,64 +1,119 @@
-// .popup {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   visibility: hidden;
-//   opacity: 0;
-//   background: url('../src/images/back-popup.png') no-repeat 50% 50% / cover, $dark;
-//   transition: opacity .8s ease, visibility .8s ease;
-//   overflow-y: auto;
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+  opacity: 0;
+  background-color: $dark;
+  transition: opacity .8s ease, visibility .8s ease;
+  overflow-y: auto;
 
-//   &.big {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//   }
+  // &.big {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
 
-//   &__container {
-//     padding-top: 60px;
-//     padding-bottom: 60px;
+  &__container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    justify-content: space-between;
+    column-gap: 20px;
 
-//     @media screen and (max-width: 767px) {
-//       padding-left: 35px;
-//       padding-right: 35px;
-//     }
-//   }
+    @media screen and (max-width: 991px) {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+  }
 
-//   &.active {
-//     z-index: 10;
-//     visibility: visible;
-//     opacity: 1;
-//   }
+  &.active {
+    z-index: 1000;
+    visibility: visible;
+    opacity: 1;
+  }
 
-//   &__title {
-//     @media screen and (max-width: 1400px) {
-//       max-width: 80%;
-//     }
-//   }
+  &__contacts {
+    padding: 50px 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 1 calc(100% / 12 * 5);
+    background-color: $darkGray;
+    border-radius: 12px;
 
-//   &__close {
-//     position: absolute;
-//     right: 112px;
-//     top: 68px;
-//     color: #000;
-//     cursor: pointer;
+    &-link {
+      position: relative;
+      padding: 18px;
+      display: block;
+      width: 100%;
+      border: 1px solid $gray;
+      border-radius: 12px;
+      transition: background-color .3s ease, border-color .3s ease;
 
-//     @media screen and (max-width: 1468px) {
-//       right: 72px;
-//     }
+      &:hover {
+        background-color: $gray;
+      }
+    }
+  }
 
-//     @media screen and (max-width: 991px) {
-//       right: 32px;
-//     }
-//   }
+  &__form {
+    position: relative;
+    padding: 50px 45px;
+    flex: 0 1 calc(100% / 12 * 7);
+    border-radius: 12px;
+  }
 
-//   &__success-form {
-//     display: none;
+  &__close {
+    position: absolute;
+    right: 0;
+    top: -62px;
+    padding: 13px;
+    display: flex;
+    border: 1px solid $gray;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color .3s ease;
 
-//     &.active {
-//       display: block;
-//     }
-//   }
-// }
+    &:hover {
+      background-color: $gray;
+    }
+
+    @media screen and (max-width: 1468px) {
+      right: 72px;
+    }
+
+    @media screen and (max-width: 991px) {
+      right: 32px;
+    }
+  }
+
+  // &__success-form {
+  //   display: none;
+
+  //   &.active {
+  //     display: block;
+  //   }
+  // }
+
+  &__send {
+    opacity: 1;
+    visibility: visible;
+
+    &-container {
+      height: 100%;
+      flex-direction: column;
+      row-gap: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-title {
+      padding-top: 36px;
+    }
+
+    &-btn {
+      margin-top: 50px;
+    }
+  }
+}

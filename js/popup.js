@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const popup = document.querySelector('.popup');
   const popupContainer = document.querySelector('.popup__container');
   const popupTitle = document.querySelector('.popup__title');
-  // const formSuccess = document.querySelector('.popup-form__success-form');
+  // const formSuccess = document.querySelector('.form__success-form');
   const close = document.querySelector('.popup__close');
 
   function positionPopup() {
@@ -41,63 +41,73 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // mask phone
 
-  const phone = document.getElementById('phone');
+  const phones = document.getElementsByName('phone');
 
-  phone.addEventListener('focus', () => {
-    const maskOptions = {
-      mask: '+7(000)000-00-00',
-    }
+  for (const phone of phones) {
+    phone.addEventListener('focus', () => {
+      const maskOptions = {
+        mask: '+7(000)000-00-00',
+      }
 
-    const mask = IMask(phone, maskOptions);
-  })
+      const mask = IMask(phone, maskOptions);
+    })
+  }
 
   // click form submit
+  // const forms = document.querySelectorAll('.form__form');
 
-  // form.addEventListener("submit", (e) => {
-  //   e.preventDefault();
-  //   sendToTg();
-  // });
+  // for (const form of forms) {
+  //   const formSuccess = form.querySelector('.form__success-form');
 
-  // function sendToTg() {
-  //   const name = document.getElementById("name").value;
-  //   const phone = document.getElementById("phone").value;
+  //   form.addEventListener("submit", (e) => {
+  //     e.preventDefault();
+  //     sendToTg();
+  //   });
 
-  //   const message =
-  //     "Имя: " + name + ", Телефон: " + phone;
+  //   function sendToTg() {
+  //     const name = form.querySelector(".form__name").value;
+  //     const patro = form.querySelector(".form__patro").value;
+  //     const phone = form.querySelector(".form__phone").value;
+  //     const email = form.querySelector(".form__email").value;
+  //     const descr = form.querySelector(".form__descr").value;
 
-  //   const url =
-  //     "https://api.telegram.org/bot/sendMessage?chat_id=&text=" +
-  //     message;
+  //     const message =
+  //       "Имя: " + name + ", Отчество: " + patro + ", Телефон: " + phone + ", Почта: " + email + ", Пожелания: " + descr;
 
-  //   fetchData(url, message);
-  // }
+  //     const url =
+  //       "https://api.telegram.org/bot6824653689:AAGccVzR2V7kURugkg7MdiWjzcN7kz89qmM?chat_id=-1002047599406&text=" +
+  //       message;
 
-  // async function fetchData(url, message) {
-  //   try {
-  //     const response = await fetch(url, {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify({ message }),
-  //     });
+  //     fetchData(url, message);
+  //   }
 
-  //     if (response.ok) {
-  //       form.classList.add('hidden');
-  //       formSuccess.classList.add('active');
-  //       feedbackForm.reset();
-  //       ym(95744709, "reachGoal", "lead");
-  //       window.scrollTo({
-  //         top: 0,
-  //         behavior: "smooth",
+  //   async function fetchData(url, message) {
+  //     try {
+  //       const response = await fetch(url, {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify({ message }),
   //       });
-  //     } else {
-  //       console.error(
-  //         `Ошибка при выполнении запроса: ${response.status} ${response.statusText}`,
-  //       );
+
+  //       if (response.ok) {
+  //         form.classList.add('hidden');
+  //         formSuccess.classList.add('active');
+  //         feedbackForm.reset();
+  //         ym(95744709, "reachGoal", "lead");
+  //         window.scrollTo({
+  //           top: 0,
+  //           behavior: "smooth",
+  //         });
+  //       } else {
+  //         console.error(
+  //           `Ошибка при выполнении запроса: ${response.status} ${response.statusText}`,
+  //         );
+  //       }
+  //     } catch (error) {
+  //       console.error(`Ошибка при выполнении запроса: ${error}`);
   //     }
-  //   } catch (error) {
-  //     console.error(`Ошибка при выполнении запроса: ${error}`);
   //   }
   // }
 })
